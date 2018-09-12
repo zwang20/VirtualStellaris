@@ -117,7 +117,8 @@ def info_ship(noun):
 
 
 def info_system(noun):
-    if
+    if noun in System.object_names:
+        return System.objects[System.object_names.index(noun)].get_info()
 
 def game():
     while True:
