@@ -56,7 +56,6 @@ class System:
 class Fleet:
     objects = []
     object_names = []
-    alligence = ''
 
     def __init__(self, name, alligence):
         pass
@@ -69,7 +68,6 @@ class Fleet:
         del temp_list
 
 class Ship:
-    alligence = ''
 
     def __init__(self):
         pass
