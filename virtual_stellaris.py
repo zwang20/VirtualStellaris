@@ -62,7 +62,8 @@ class Fleet:
         temp_name = random.choice(fleet_names)
         while temp_name in System.object_names:
             temp_name = random.choice(fleet_names)
-        while temp_name in Fleet.object_names:
+        self.name = temp_name
+        del temp_name
 
 
     def renew():
