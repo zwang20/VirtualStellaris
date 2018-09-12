@@ -58,7 +58,7 @@ class Fleet:
     object_names = []
     alligence = ''
 
-    def __init__(self, name):
+    def __init__(self, name, alligence):
         pass
 
     def renew():
