@@ -64,5 +64,5 @@ class PlayerFleet:
         temp_list = []
         for i in PlayerFleet.objects:
             temp_list.append(i.name)
-        object_names = temp_list
+        PlayerFleet.object_names = temp_list
         del temp_list
