@@ -9,7 +9,8 @@ import random
 #         self.up = up
 #         Planet.objects.append(self)
 
-random_names = open('names.txt', 'r').read().split('\n')
+ship_names = open('ShipNames.txt', 'r').read().split('\n')
+fleet_names = open('FleetNames.txt', 'r').read().split('\n')
 
 planet_dict = {
     '' : [0, 0],
@@ -26,9 +27,9 @@ class System:
 
     def __init__(self):
         self.discription = ''
-        temp_name = random.choice(random_names)
+        temp_name = random.choice(ship_names)
         while temp_name in System.object_names:
-            temp_name = random.choice(random_names)
+            temp_name = random.choice(ship_names)
         self.name = temp_name
         del temp_name
         self.planets = [random.choice(planet_type_list) for i in range(8)]
@@ -57,8 +58,10 @@ class Fleet:
     objects = []
     object_names = []
 
-    def __init__(self, name, alligence):
-        pass
+    def __init__(self, alligence):
+        temp_name = random.choice(ship_names)
+        while temp_name in Fleet.object_names:
+
 
     def renew():
         temp_list = []
@@ -69,5 +72,5 @@ class Fleet:
 
 class Ship:
 
-    def __init__(self):
+    def __init__(self, alligence):
         pass
