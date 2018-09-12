@@ -11,6 +11,7 @@ import random
 
 ship_names = open('ShipNames.txt', 'r').read().split('\n')
 fleet_names = open('FleetNames.txt', 'r').read().split('\n')
+system_names = open('SystemNames.txt', 'r').read().split('\n')
 
 planet_dict = {
     '' : [0, 0],
@@ -27,9 +28,9 @@ class System:
 
     def __init__(self):
         self.discription = ''
-        temp_name = random.choice(ship_names)
+        temp_name = random.choice(system_names)
         while temp_name in System.object_names:
-            temp_name = random.choice(ship_names)
+            temp_name = random.choice(system_names)
         self.name = temp_name
         del temp_name
         self.planets = [random.choice(planet_type_list) for i in range(8)]
@@ -60,11 +61,11 @@ class Fleet:
 
     def __init__(self, alligence):
         temp_name = random.choice(fleet_names)
-        while temp_name in System.object_names:
+        while temp_name in Fleet.object_names:
             temp_name = random.choice(fleet_names)
         self.name = temp_name
         del temp_name
-
+        self.alligence = alligence
 
     def renew():
         temp_list = []
@@ -74,6 +75,20 @@ class Fleet:
         del temp_list
 
 class Ship:
+    objects = []
+    object_names = []
 
     def __init__(self, alligence):
-        pass
+        temp_name = random.choice(ship_names)
+        while temp_name in Ship.object_names:
+            temp_name = random.choice(ship_names)
+        self.name = temp_name
+        del temp_name
+        self.alligence = alligence
+
+    def renew():
+        temp_list = []
+        for i in Ship.objects:
+            temp_list.append(i.name)
+        Ship.object_names = temp_list
+        del temp_list
