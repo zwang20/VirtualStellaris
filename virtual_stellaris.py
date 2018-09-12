@@ -59,7 +59,9 @@ class Fleet:
     object_names = []
 
     def __init__(self, alligence):
-        temp_name = random.choice(ship_names)
+        temp_name = random.choice(fleet_names)
+        while temp_name in System.object_names:
+            temp_name = random.choice(fleet_names)
         while temp_name in Fleet.object_names:
 
 
