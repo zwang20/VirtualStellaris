@@ -27,14 +27,15 @@ class System:
     def __init__(self):
         self.discription = ''
         temp_name = random.choice(random_names)
-        while temp_name in System.objects:
+        while temp_name in System.object_names:
             temp_name = random.choice(random_names)
         self.name = temp_name
         del temp_name
-        self.discription = description
         self.planets = [random.choice(planet_type_list) for i in range(8)]
         print (self.planets)
         System.objects.append(self)
+
+        System.renew()
 
     def renew():
         temp_list = []
@@ -44,16 +45,16 @@ class System:
         del temp_list
 
     def modify_name(self, name):
-        if name not in System.objects():
+        if name not in System.object_names():
             self.name = name
+        System.renew()
 
     def modify_discription(self, description):
         self.discription = discription
+        System.renew()
 
 class PlayerFleet:
     objects = []
 
     def __init__(self):
         pass
-
-System.renew()
