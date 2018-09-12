@@ -120,6 +120,19 @@ def info_system(noun):
     if noun in System.object_names:
         return System.objects[System.object_names.index(noun)].get_info()
 
+verb_dict = {
+'info_ship' : info_ship,
+'info_system' : info_system,
+}
+
 def game():
     while True:
-        pass
+        user_input = input('Command: ').split()
+        if user_input[0] in verb_dict.keys():
+            verb_dict[user_input[0]](user_input[1])
+        else:
+            print('Command not found')
+
+Ship('e')
+System()
+game()
