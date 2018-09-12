@@ -22,6 +22,7 @@ planet_dict = {
 
 planet_type_list = [key for key in planet_dict.keys()]
 
+
 class System:
     objects = []
     object_names = []
@@ -107,9 +108,16 @@ class Ship:
         Ship.object_names = temp_list
         del temp_list
 
+    def get_info(self):
+        return 'alligence' + self.alligence
+
 def info_ship(noun):
     if noun in Ship.object_names:
-        return Ship.objects[Ship.objects.index(noun)].get_info()
+        return Ship.objects[Ship.object_names.index(noun)].get_info()
+
+
+def info_system(noun):
+    if
 
 def game():
     while True:
