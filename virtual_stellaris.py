@@ -31,10 +31,11 @@ class System:
         temp_name = random.choice(system_names)
         while temp_name in System.object_names:
             temp_name = random.choice(system_names)
+        print('System', temp_name, 'was created')
         self.name = temp_name
         del temp_name
         self.planets = [random.choice(planet_type_list) for i in range(8)]
-        print (self.planets)
+
         System.objects.append(self)
 
         System.renew()
@@ -55,6 +56,9 @@ class System:
         self.discription = discription
         System.renew()
 
+    def get_info(self):
+        return self.planets
+
 class Fleet:
     objects = []
     object_names = []
@@ -63,9 +67,14 @@ class Fleet:
         temp_name = random.choice(fleet_names)
         while temp_name in Fleet.object_names:
             temp_name = random.choice(fleet_names)
+        print('Fleet', temp_name, 'was created')
         self.name = temp_name
         del temp_name
         self.alligence = alligence
+
+        Fleet.objects.append(self)
+
+        Fleet.renew()
 
     def renew():
         temp_list = []
@@ -82,9 +91,14 @@ class Ship:
         temp_name = random.choice(ship_names)
         while temp_name in Ship.object_names:
             temp_name = random.choice(ship_names)
+        print('Ship', temp_name, 'was created')
         self.name = temp_name
         del temp_name
         self.alligence = alligence
+
+        Ship.objects.append(self)
+
+        Ship.renew()
 
     def renew():
         temp_list = []
@@ -92,6 +106,10 @@ class Ship:
             temp_list.append(i.name)
         Ship.object_names = temp_list
         del temp_list
+
+def info_ship(noun):
+    if noun in Ship.object_names:
+        return Ship.objects[Ship.objects.index(noun)].get_info()
 
 def game():
     while True:
