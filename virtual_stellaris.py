@@ -57,7 +57,7 @@ class PlayerFleet:
     objects = []
     object_names = []
 
-    def __init__(self):
+    def __init__(self, name):
         pass
 
     def renew():
