@@ -92,3 +92,7 @@ class Ship:
             temp_list.append(i.name)
         Ship.object_names = temp_list
         del temp_list
+
+def game():
+    while True:
+        pass
