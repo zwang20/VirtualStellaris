@@ -41,7 +41,7 @@ class System:
         temp_list = []
         for i in System.objects:
             temp_list.append(i.name)
-        object_names = temp_list
+        System.object_names = temp_list
         del temp_list
 
     def modify_name(self, name):
@@ -55,6 +55,14 @@ class System:
 
 class PlayerFleet:
     objects = []
+    object_names = []
 
     def __init__(self):
         pass
+
+    def renew():
+        temp_list = []
+        for i in PlayerFleet.objects:
+            temp_list.append(i.name)
+        object_names = temp_list
+        del temp_list
