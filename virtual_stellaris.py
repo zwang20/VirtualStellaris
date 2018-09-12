@@ -53,16 +53,23 @@ class System:
         self.discription = discription
         System.renew()
 
-class PlayerFleet:
+class Fleet:
     objects = []
     object_names = []
+    alligence = ''
 
     def __init__(self, name):
         pass
 
     def renew():
         temp_list = []
-        for i in PlayerFleet.objects:
+        for i in Fleet.objects:
             temp_list.append(i.name)
-        PlayerFleet.object_names = temp_list
+        Fleet.object_names = temp_list
         del temp_list
+
+class Ship:
+    alligence = ''
+
+    def __init__(self):
+        pass
