@@ -126,10 +126,10 @@ verb_dict = {
 }
 
 def game():
-    Ship('e')
+    Ship('Player_1')
     System()
     game()
-    
+
     while True:
         user_input = input('Command: ').split()
         if user_input[0] in verb_dict.keys():
