@@ -15,7 +15,7 @@ system_names = open('SystemNames.txt', 'r').read().split('\n')
 
 planet_dict = {
     '' : [0, 0],
-    'planet' : [1, 0],
+    'planet' : [1, 1],
     'asteroid' : [3, 0],
     'gas_giant' : [0, 1],
 }
