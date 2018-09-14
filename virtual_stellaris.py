@@ -120,9 +120,13 @@ def info_system(noun):
     if noun in System.object_names:
         return System.objects[System.object_names.index(noun)].get_info()
 
+def build_ship(noun):
+    Ship()
+
 verb_dict = {
 'info_ship' : info_ship,
 'info_system' : info_system,
+'build_ship' : None
 }
 
 def game():
