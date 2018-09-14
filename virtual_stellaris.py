@@ -126,13 +126,13 @@ verb_dict = {
 }
 
 def game():
+    Ship('e')
+    System()
+    game()
+    
     while True:
         user_input = input('Command: ').split()
         if user_input[0] in verb_dict.keys():
             verb_dict[user_input[0]](user_input[1])
         else:
             print('Command not found')
-
-Ship('e')
-System()
-game()
