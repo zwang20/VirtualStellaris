@@ -1,15 +1,20 @@
 print('Hello')
 
+object_types = []
+
 # Classes
-class System:
+class StarSystem:
 
     def init(self):
         pass
 
 
-class SystemObject:
+class StarSystemObject:
 
-    def init(self):
+    def init(self, object_type, production_points, upkeep_points):
+        self.object_type = object_type
+        self.production_points = production_points
+        self.upkeep_points = upkeep_points
         pass
 
 
